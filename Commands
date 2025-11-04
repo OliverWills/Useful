@@ -1,0 +1,2 @@
+Alpine install docker command
+apk update && apk add docker docker-compose openrc curl wget nano && rc-update add docker boot && service docker start
