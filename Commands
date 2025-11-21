@@ -1,2 +1,8 @@
 Alpine install docker command
 apk update && apk add docker docker-compose openrc curl wget nano && rc-update add docker boot && service docker start
+
+# Install docker on fresh debian
+sudo apt install containerd.io=1.7.28-1~debian.12~bookworm
+sudo apt-mark hold containerd.io
+sudo systemctl restart docker
+docker ps
