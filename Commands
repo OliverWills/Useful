@@ -6,3 +6,10 @@ sudo apt install containerd.io=1.7.28-1~debian.12~bookworm
 sudo apt-mark hold containerd.io
 sudo systemctl restart docker
 docker ps
+
+# add dns to cloudflared tunnel
+#1 add cname dns record to tunnel
+cloudflared tunnel route dns oliverwills <service>
+#2 add to config .cloudflared/config.yml
+#3 restart cloudflared service
+systemctl restart cloudflared
