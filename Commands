@@ -13,3 +13,10 @@ cloudflared tunnel route dns oliverwills <service>
 #2 add to config .cloudflared/config.yml
 #3 restart cloudflared service
 systemctl restart cloudflared
+
+# Nextcloud reset password
+sudo -E -u www-data php /var/www/nextcloud/occ user:resetpassword admin
+# get list of users
+occ user:list
+# reset user layla password
+occ user:resetpassword layla
