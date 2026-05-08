@@ -20,3 +20,16 @@ sudo -E -u www-data php /var/www/nextcloud/occ user:resetpassword admin
 occ user:list
 # reset user layla password
 occ user:resetpassword layla
+
+## setup claude code
+install node js
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
+\. "$HOME/.nvm/nvm.sh"
+nvm install 24
+check installed correctly
+node -v
+npm -v
+install claude code
+npm install -g @anthropic-ai/claude-code
+login to claude account and then change to superclaude
+"make that when I type superclaude it results in claude --dangerously-skip-permission in terminal and from ssh"
