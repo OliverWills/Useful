@@ -21,6 +21,14 @@ occ user:list
 # reset user layla password
 occ user:resetpassword layla
 
+## setup container for claude
+# 1. Create the user
+adduser -D claude
+# 2. Give it a workspace for the agent project
+mkdir -p /opt/sailing-agent
+chown -R claude:claude /opt/sailing-agent
+# 3. Switch to the user (login shell so ~/.profile loads)
+su -l claude
 ## setup claude code
 install node js
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
