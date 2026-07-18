@@ -6,6 +6,12 @@ apk add openssh
 rc-update add sshd
 rc-status # List services to verify sshd is enabled:
 rc-service sshd start
+vi /etc/ssh/sshd_config
+PermitRootLogin yes
+UseDNS no   # By setting this to no, connection speed can increase.
+PasswordAuthentication no  # Do not allow password authentication.
+rc-service sshd restart
+
 
 # Install docker on fresh debian
 sudo apt install containerd.io=1.7.28-1~debian.12~bookworm
