@@ -113,7 +113,7 @@ docker start immich_postgres   # Start Postgres server
 sleep 10                       # Wait for Postgres server to start up
 
 # Restore the database backup
-gunzip < "/path/to/backup/dump.sql.gz" | docker exec -i immich_postgres psql -U postgres -d immich
+gunzip < "/mnt/Red/immich/data/backups/dump.sql.gz" | docker exec -i immich_postgres psql -U postgres -d immich
 
 docker-compose up -d     # Start remainder of Immich apps
 ```
