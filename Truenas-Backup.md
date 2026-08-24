@@ -89,7 +89,7 @@ List files in the bucket (empty for now):
 
 ## 4. Run the Backup
 
-A cron job has been created in the TrueNAS GUI, run as the `admin` user:
+A cron job has been created in the TrueNAS GUI, run as the `root` user:
 
 ```console
 > rclone sync /mnt/Red/immich/data Immich:Wills-Immich-Bucket \
