@@ -92,7 +92,7 @@ List files in the bucket (empty for now):
 A cron job has been created in the TrueNAS GUI, run as the `root` user:
 
 ```console
-> rclone sync /mnt/Red/immich/data Immich:Wills-Immich-Bucket \
+> rclone sync /mnt/Red/immich/data Immich:ImmichBackup-Bucket \
     --config /mnt/Red/immich/rclone.conf \
     --transfers 10 \
     --fast-list \
